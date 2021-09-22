@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather app</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7cc9b7487d.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-app card">
+          <div class="card-body">
+       
+            
+          <form class="search-box" id="city-search">
+            <button class="btn" id="current-location" type="button"><i class="fas fa-location-arrow location-icon"></i></button>
+  <button class="btn btn-outline-secondary button-style" type="submit" id="button-addon1"><i class="fas fa-search search-icon"></i></button>
+  <input type="text" class="search-area" placeholder="Search location" id="city-input" >
+  
+          </form>
+        </div>
+        <div class="row">
+            <div class="col-5">
+        <h1 id="city"></h1>
+        
+        <p class="degree-nom"><span class="degree-num" id="current-temp"></span>° <sup><a class="degree" id="c-degree">C</a>|<a class="degree" id="f-degree">F</a></sup></p>
+        </div>
+        <div class="col-3">
+           <p class="text-start" id="dateTime">Sunday</p>
+           <span class="exact-time" id="timeOnly">12:15</span>
+           
+           
+           <p class="weather-info"><span id="description"></span><br/><span class="second-degree">Feels like: </span><span id=feels-like></span>° <br> <span class="second-degree">Humidity:</span> <span id="humidity"></span>% <br> </p>
+        </div>
+        <div class="col-4">
+            <i class="fas fa-sun sun"></i>
+           
+        </div>
+        </div>
+       
+        
+        <hr>
+        <div class="row bottom-part">
+            
+             
+            <div class="col-2 days">
+                <p>MON</p>
+                <i class="fas fa-cloud-sun cloud-sun"></i>
+                <p>24<span class="second-degree"> 18</span></p>
+            </div>
+            <div class="col-2 days">
+                <p>TUE</p>
+                <i class="fas fa-cloud-showers-heavy cloud-shower"></i>
+                <p>18 <span class="second-degree">16</span></p>
+            </div>
+            <div class="col-2 days">
+                <p>WED</p>
+                <i class="fas fa-cloud-sun-rain cloud-sun-rain"></i>
+                <p>20 <span class="second-degree">14</span></p>
+            </div>
+            <div class="col-2 days">
+                <p>THU</p>
+                <i class="fas fa-cloud-sun cloud-sun"></i>
+                <p>21 <span class="second-degree">18</span></p>
+            </div>
+            <div class="col-2 days">
+                <p>FRI</p>
+                <i class="fas fa-sun sun-small"></i>
+                <p>28 <span class="second-degree">25</span></p>
+            </div> 
+            <div class="col-2 days">
+                <p>SAT</p>
+                <i class="fas fa-cloud cloud"></i>
+                <p>29 <span class="second-degree">25</span></p>
+            </div>
+          </div>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+<script src="src/script.js"></script>
+  </body>
+</html>

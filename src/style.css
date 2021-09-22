@@ -1,0 +1,108 @@
+body {
+  color: #e46161;
+  font-family: "Righteous", cursive;
+}
+h1 {
+  margin-left: 80px;
+}
+
+hr {
+  color: lightslategrey;
+}
+.weather-app {
+  background-color: black;
+  margin: 20px auto;
+  max-width: 600px;
+  border-radius: 30px;
+}
+.button-style {
+  border: none;
+}
+.button-style:hover {
+  background-color: transparent;
+}
+.location-icon {
+  color: #e46161;
+  font-size: 28px;
+}
+.search-box {
+  text-align: center;
+}
+.search-icon {
+  font-size: 35px;
+  color: #e46161;
+}
+.search-area {
+  border-radius: 50px;
+  font-size: 18px;
+  width: 60%;
+  padding: 15px 90px 15px 15px;
+  margin: 20px 0px;
+  border: none;
+}
+.degree-nom,
+.degree {
+  display: inline;
+}
+.degree-nom {
+  margin-left: 90px;
+  font-size: 45px;
+}
+.degree {
+  font-size: 26px;
+  text-decoration: none;
+  cursor: pointer;
+  color: #e46161;
+}
+.degree:hover {
+  color: #e46161;
+  opacity: 50%;
+}
+.text-start {
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+.exact-time {
+  font-size: 14px;
+}
+
+.sun {
+  color: #efc107;
+  font-size: 120px;
+}
+.bottom-part {
+  margin: 20px 0;
+}
+.cloud-sun,
+.cloud-shower,
+.cloud-sun-rain,
+.sun-small,
+.cloud {
+  font-size: 35px;
+}
+.cloud-sun {
+  color: #f9e26b;
+}
+.cloud-shower {
+  color: lightblue;
+}
+.cloud-sun-rain {
+  color: lightblue;
+}
+.sun-small {
+  color: #efc107;
+}
+.cloud {
+  color: whitesmoke;
+}
+.days {
+  text-align: center;
+}
+
+.second-degree {
+  opacity: 50%;
+}
+.weather-info {
+  margin-top: 10px;
+}
