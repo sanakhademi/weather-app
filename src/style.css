@@ -106,3 +106,15 @@ hr {
 .weather-info {
   margin-top: 10px;
 }
+.coding-mark {
+  margin: 0px 365px;
+  display: block;
+}
+.coding-mark p {
+  font-family: monospace;
+  color: black;
+  font-size: 14px;
+}
+.git-link {
+  text-decoration: none;
+}
