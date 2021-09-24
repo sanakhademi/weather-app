@@ -107,8 +107,7 @@ hr {
   margin-top: 10px;
 }
 .coding-mark {
-  margin: 0px 365px;
-  display: block;
+  text-align: center;
 }
 .coding-mark p {
   font-family: monospace;
