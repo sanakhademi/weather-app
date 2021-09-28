@@ -99,6 +99,13 @@ hr {
 .second-degree {
   opacity: 50%;
 }
+.second-column {
+  padding-left: 40px;
+  padding-right: 0px;
+}
+.image-icon {
+  padding: 0 12px 0px 0px;
+}
 .weather-info {
   margin-top: 10px;
 }
