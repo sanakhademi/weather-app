@@ -48,19 +48,36 @@ hr {
   margin-left: 90px;
   font-size: 45px;
 }
-
-.degree {
+.cel-style {
   font-size: 26px;
   text-decoration: none;
-  cursor: pointer;
+  cursor: default;
   color: #e46161;
 }
-.degree:hover {
+.c-style {
+  opacity: 50%;
+}
+
+.faren-style {
+  font-size: 26px;
+  text-decoration: none;
   color: #e46161;
   opacity: 50%;
   cursor: default;
 }
-.degree-nom .active:hover {
+.f-style {
+  font-size: 26px;
+  text-decoration: none;
+  cursor: default;
+  color: #e46161;
+}
+
+.f-style:hover {
+  color: #e46161;
+  opacity: 100%;
+  cursor: default;
+}
+.cel-style:hover {
   color: #e46161;
   opacity: 100%;
   cursor: default;

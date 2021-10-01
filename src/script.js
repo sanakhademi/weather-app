@@ -33,8 +33,8 @@ timeSpace.innerHTML = timeSet(currentTime);
 //switch degree between celsius and fahrenheit
 function changeDegreeC(event) {
   event.preventDefault();
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
+  celsiusLink.classList.remove("c-style");
+  fahrenheitLink.classList.add("faren-style");
   let temperatureElement = document.querySelector("#current-temp");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
@@ -43,8 +43,8 @@ function changeDegreeF(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#current-temp");
   //remove celsius active class
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
+  celsiusLink.classList.add("c-style");
+  fahrenheitLink.classList.remove("faren-style");
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
