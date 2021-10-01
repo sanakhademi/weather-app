@@ -31,13 +31,11 @@ timeSpace.innerHTML = timeSet(currentTime);
 //end of date and time codes
 
 //switch degree between celsius and fahrenheit
-function changeDegree(event) {
+function changeDegreeC(event) {
   event.preventDefault();
-  let degreeNumber = document.querySelector(".degree-num");
-  degreeNumber.innerHTML = "22°";
+  let temperatureElement = document.querySelector("#current-temp");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
-let celsius = document.querySelector("#c-degree");
-celsius.addEventListener("click", changeDegree);
 
 function changeDegreeF(event) {
   event.preventDefault();
@@ -116,5 +114,8 @@ currentLocation.addEventListener("click", getLocation);
 //end of showing real searched city temperatures
 let fahrenheitLink = document.querySelector("#f-degree");
 fahrenheitLink.addEventListener("click", changeDegreeF);
+
+let celsiusLink = document.querySelector("#c-degree");
+celsiusLink.addEventListener("click", changeDegreeC);
 
 search("London");
