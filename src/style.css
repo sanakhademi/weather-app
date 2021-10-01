@@ -48,6 +48,7 @@ hr {
   margin-left: 90px;
   font-size: 45px;
 }
+
 .degree {
   font-size: 26px;
   text-decoration: none;
@@ -57,7 +58,14 @@ hr {
 .degree:hover {
   color: #e46161;
   opacity: 50%;
+  cursor: default;
 }
+.degree-nom .active:hover {
+  color: #e46161;
+  opacity: 100%;
+  cursor: default;
+}
+
 .text-start {
   font-size: 14px;
   margin-top: 10px;
