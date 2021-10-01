@@ -41,21 +41,21 @@ celsius.addEventListener("click", changeDegree);
 
 function changeDegreeF(event) {
   event.preventDefault();
-  let degreeNumberF = document.querySelector(".degree-num");
-  degreeNumberF.innerHTML = "72°";
+  let temperatureElement = document.querySelector("#current-temp");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
-let faren = document.querySelector("#f-degree");
-faren.addEventListener("click", changeDegreeF);
+let celsiusTemperature = null;
 //end of switching of degrees
 
 //showing real searched city temperatures
 
 function showTemperature(response) {
+  celsiusTemperature = response.data.main.temp;
   console.log(response.data);
   document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("#current-temp").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  document.querySelector("#current-temp").innerHTML =
+    Math.round(celsiusTemperature);
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
   document.querySelector("#feels-like").innerHTML = Math.round(
@@ -71,7 +71,9 @@ function showTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
   //end of change icon according to weather condition
 }
+
 //default page on load
+
 function search(cityName) {
   let units = "metric";
   let apiKey = "b68074b7f2b052837c816f676aa31f49";
@@ -111,5 +113,8 @@ let currentLocation = document.querySelector("#current-location");
 currentLocation.addEventListener("click", getLocation);
 //end of current location weather
 
-search("London");
 //end of showing real searched city temperatures
+let fahrenheitLink = document.querySelector("#f-degree");
+fahrenheitLink.addEventListener("click", changeDegreeF);
+
+search("London");
