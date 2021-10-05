@@ -29,7 +29,26 @@ dateSpace.innerHTML = dateSet(currentTime);
 let timeSpace = document.querySelector("#timeOnly");
 timeSpace.innerHTML = timeSet(currentTime);
 //end of date and time codes
+//forecast
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["WED", "THU", "FRI", "SAT", "SUN", "MON"];
+  let forecastHtml = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `<div class="col-2 days">
+                <p>${day}</p>
+                <i class="fas fa-cloud-sun cloud-sun"></i>
+                <p>24<span class="second-degree"> 18</span></p>
+            </div>`;
+  });
 
+  forecastHtml = forecastHtml + `</div>`;
+  forecastElement.innerHTML = forecastHtml;
+}
+
+//end of forecast
 //switch degree between celsius and fahrenheit
 function changeDegreeC(event) {
   event.preventDefault();
@@ -49,6 +68,7 @@ function changeDegreeF(event) {
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 let celsiusTemperature = null;
+
 //end of switching of degrees
 
 //showing real searched city temperatures
@@ -124,3 +144,5 @@ let celsiusLink = document.querySelector("#c-degree");
 celsiusLink.addEventListener("click", changeDegreeC);
 
 search("London");
+
+displayForecast();
