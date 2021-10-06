@@ -29,19 +29,36 @@ dateSpace.innerHTML = dateSet(currentTime);
 let timeSpace = document.querySelector("#timeOnly");
 timeSpace.innerHTML = timeSet(currentTime);
 //end of date and time codes
+
+//start of forecast days
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"];
+  return days[day];
+}
+
+//end of forecast days
+
 //forecast
 function displayForecast(response) {
-  console.log(response.data.daily);
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
-  let days = ["WED", "THU", "FRI", "SAT", "SUN", "MON"];
+
   let forecastHtml = `<div class="row">`;
-  days.forEach(function (day) {
+  forecast.forEach(function (forecastDay) {
     forecastHtml =
       forecastHtml +
       `<div class="col-2 days">
-                <p>${day}</p>
-                <i class="fas fa-cloud-sun cloud-sun"></i>
-                <p>24<span class="second-degree"> 18</span></p>
+                <p>${formatDay(forecastDay.dt)}</p>
+                <img src="http://openweathermap.org/img/wn/${
+                  forecastDay.weather[0].icon
+                }@2x.png"/>
+                <p>${Math.round(
+                  forecastDay.temp.max
+                )}°<span class="second-degree"> ${Math.round(
+        forecastDay.temp.min
+      )}°</span></p>
             </div>`;
   });
 
