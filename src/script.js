@@ -30,7 +30,8 @@ let timeSpace = document.querySelector("#timeOnly");
 timeSpace.innerHTML = timeSet(currentTime);
 //end of date and time codes
 //forecast
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
   let days = ["WED", "THU", "FRI", "SAT", "SUN", "MON"];
   let forecastHtml = `<div class="row">`;
@@ -72,10 +73,16 @@ let celsiusTemperature = null;
 //end of switching of degrees
 
 //showing real searched city temperatures
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "b68074b7f2b052837c816f676aa31f49";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(displayForecast);
+}
 
 function showTemperature(response) {
   celsiusTemperature = response.data.main.temp;
-  console.log(response.data);
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#current-temp").innerHTML =
     Math.round(celsiusTemperature);
@@ -93,6 +100,7 @@ function showTemperature(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
   //end of change icon according to weather condition
+  getForecast(response.data.coord);
 }
 
 //default page on load
@@ -144,5 +152,3 @@ let celsiusLink = document.querySelector("#c-degree");
 celsiusLink.addEventListener("click", changeDegreeC);
 
 search("London");
-
-displayForecast();
