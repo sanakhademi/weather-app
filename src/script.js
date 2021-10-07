@@ -46,20 +46,22 @@ function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHtml = `<div class="row">`;
-  forecast.forEach(function (forecastDay) {
-    forecastHtml =
-      forecastHtml +
-      `<div class="col-2 days">
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHtml =
+        forecastHtml +
+        `<div class="col-2 days">
                 <p>${formatDay(forecastDay.dt)}</p>
                 <img src="http://openweathermap.org/img/wn/${
                   forecastDay.weather[0].icon
-                }@2x.png"/>
+                }@2x.png" width:"10"/>
                 <p>${Math.round(
                   forecastDay.temp.max
                 )}°<span class="second-degree"> ${Math.round(
-        forecastDay.temp.min
-      )}°</span></p>
+          forecastDay.temp.min
+        )}°</span></p>
             </div>`;
+    }
   });
 
   forecastHtml = forecastHtml + `</div>`;
