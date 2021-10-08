@@ -69,9 +69,6 @@ function displayForecast(response) {
 }
 
 //end of forecast
-//switch degree between celsius and fahrenheit
-
-//end of switching of degrees
 
 //showing real searched city temperatures
 function getForecast(coordinates) {

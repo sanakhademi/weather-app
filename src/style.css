@@ -42,10 +42,7 @@ hr {
 .degree {
   display: inline;
 }
-/* .degree-nom {
-  /* margin-left: 110px; */
-/* font-size: 45px;
- */
+
 .cel-style {
   font-size: 26px;
   text-decoration: none;
@@ -93,28 +90,6 @@ hr {
 .bottom-part {
   margin: 20px 0;
 }
-.cloud-sun,
-.cloud-shower,
-.cloud-sun-rain,
-.sun-small,
-.cloud {
-  font-size: 35px;
-}
-.cloud-sun {
-  color: #f9e26b;
-}
-.cloud-shower {
-  color: lightblue;
-}
-.cloud-sun-rain {
-  color: lightblue;
-}
-.sun-small {
-  color: #efc107;
-}
-.cloud {
-  color: whitesmoke;
-}
 .days {
   text-align: center;
 }
@@ -125,13 +100,6 @@ hr {
 .min-degree {
   opacity: 50%;
 }
-/* .second-column {
-  padding-left: 40px;
-  padding-right: 0px;
-} */
-/* .image-icon {
-  /* padding: 0 12px 0px 0px; */
-
 .weather-info {
   margin-top: 10px;
 }
@@ -150,9 +118,11 @@ hr {
   h1,
   .degree-nom {
     font-size: 5.5vw;
+    text-align: center;
   }
   h1 {
-    margin-top: 30px;
+    margin-top: 10px;
+    text-align: center;
   }
   .image-icon img {
     width: 80px;
@@ -162,6 +132,7 @@ hr {
   h1,
   .degree-nom {
     font-size: 40px;
+    text-align: center;
   }
   .image-icon img {
     width: 120px;
