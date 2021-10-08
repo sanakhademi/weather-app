@@ -70,24 +70,6 @@ function displayForecast(response) {
 
 //end of forecast
 //switch degree between celsius and fahrenheit
-function changeDegreeC(event) {
-  event.preventDefault();
-  celsiusLink.classList.remove("c-style");
-  fahrenheitLink.classList.add("faren-style");
-  let temperatureElement = document.querySelector("#current-temp");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-
-function changeDegreeF(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#current-temp");
-  //remove celsius active class
-  celsiusLink.classList.add("c-style");
-  fahrenheitLink.classList.remove("faren-style");
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
-let celsiusTemperature = null;
 
 //end of switching of degrees
 
@@ -164,10 +146,5 @@ currentLocation.addEventListener("click", getLocation);
 //end of current location weather
 
 //end of showing real searched city temperatures
-let fahrenheitLink = document.querySelector("#f-degree");
-fahrenheitLink.addEventListener("click", changeDegreeF);
-
-let celsiusLink = document.querySelector("#c-degree");
-celsiusLink.addEventListener("click", changeDegreeC);
 
 search("London");
