@@ -5,12 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather app</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
@@ -21,7 +16,7 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-app card">
+      <div class="weather-app card mx-sm-auto">
           <div class="card-body">
        
             
@@ -34,9 +29,11 @@
         </div>
         <div class="row">
             <div class="col-5">
+              <div class="ml-sm-5 ml-md-5 ml-lg-5 ml-lx-5">
         <h1 id="city"></h1>
         
-        <p class="degree-nom"><span class="degree-num" id="current-temp"></span>° <sup>C</sup></p>
+        <p class="degree-nom"><span class="degree-num" id="current-temp"></span> <sup>°</sup></p>
+        </div>
         </div>
         <div class="col-4 second-column">
            <p class="text-start" id="dateTime">Sunday</p>
