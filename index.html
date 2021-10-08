@@ -23,36 +23,37 @@
           <form class="search-box" id="city-search">
             <button class="btn" id="current-location" type="button"><i class="fas fa-location-arrow location-icon"></i></button>
   <button class="btn btn-outline-secondary button-style" type="submit"><i class="fas fa-search search-icon"></i></button>
-  <input type="text" class="search-area" placeholder="Search location" id="city-input" autocomplete="off" required >
+  <input type="text" class="search-area col-lg-7 col-md-7 col-sm-7" placeholder="Search location" id="city-input" autocomplete="off" required >
   
           </form>
         </div>
         <div class="row">
-            <div class="col-5">
-              <div class="ml-sm-5 ml-md-5 ml-lg-5 ml-lx-5">
-        <h1 id="city"></h1>
+            <div class="col-4">
+              <div>
+        <h1 id="city" class="ml-4"></h1>
         
-        <p class="degree-nom"><span class="degree-num" id="current-temp"></span> <sup>°</sup></p>
+        <p class="degree-nom ml-5 ml-sm-5 ml-md-5 ml-lg-5 ml-lx-5"><span class="degree-num" id="current-temp"></span> <sup>°</sup></p>
         </div>
         </div>
-        <div class="col-4 second-column">
+        <div class="col-5 second-column">
+          <div class="ml-5 ml-sm-3 ml-md-3 ml-lg-5 ml-lx-5">
            <p class="text-start" id="dateTime">Sunday</p>
            <span class="exact-time" id="timeOnly">12:15</span>
            
            
            <p class="weather-info"><span id="description"></span><br/><span class="second-degree">Feels like: </span><span id=feels-like></span>° <br> <span class="second-degree">Humidity:</span> <span id="humidity"></span>% <br> </p>
         </div>
-        <div class="col-3 image-icon">
+      </div>
+        <div class="col-2 image-icon">
             
-            <img src="" alt="clear" id="icon"/>
-  
-           
+            <img src="" alt="clear" id="icon"/>  
         </div>
         </div>
-       
-        
         <hr>
         <div class="row bottom-part" id="forecast">
+        
+
+          
             
           </div>
          

@@ -6,6 +6,7 @@ body {
 hr {
   color: lightslategrey;
 }
+
 .weather-app {
   background-color: black;
   margin: 20px auto;
@@ -32,7 +33,7 @@ hr {
 .search-area {
   border-radius: 50px;
   font-size: 18px;
-  width: 60%;
+  width: 100%;
   padding: 15px 90px 15px 15px;
   margin: 20px 0px;
   border: none;
@@ -41,10 +42,10 @@ hr {
 .degree {
   display: inline;
 }
-.degree-nom {
+/* .degree-nom {
   /* margin-left: 110px; */
-  font-size: 45px;
-}
+/* font-size: 45px;
+ */
 .cel-style {
   font-size: 26px;
   text-decoration: none;
@@ -128,9 +129,9 @@ hr {
   padding-left: 40px;
   padding-right: 0px;
 } */
-.image-icon {
-  padding: 0 12px 0px 0px;
-}
+/* .image-icon {
+  /* padding: 0 12px 0px 0px; */
+
 .weather-info {
   margin-top: 10px;
 }
@@ -144,4 +145,22 @@ hr {
 }
 .git-link {
   text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  h1,
+  .degree-nom {
+    font-size: 20px;
+  }
+  .image-icon img {
+    width: 80px;
+  }
+}
+@media screen and (min-width: 601px) {
+  h1,
+  .degree-nom {
+    font-size: 40px;
+  }
+  .image-icon img {
+    width: 100px;
+  }
 }
