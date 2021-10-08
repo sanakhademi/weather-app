@@ -125,6 +125,9 @@ hr {
 .min-degree {
   opacity: 50%;
 }
+.second-column {
+  display: -webkit-box;
+}
 /* .second-column {
   padding-left: 40px;
   padding-right: 0px;
@@ -149,10 +152,10 @@ hr {
 @media screen and (max-width: 600px) {
   h1,
   .degree-nom {
-    font-size: 20px;
+    font-size: 28px;
   }
   .image-icon img {
-    width: 80px;
+    width: 40px;
   }
 }
 @media screen and (min-width: 601px) {
