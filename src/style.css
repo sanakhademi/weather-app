@@ -122,6 +122,9 @@ hr {
 }
 
 .second-degree {
+  opacity: 0.6;
+}
+.min-degree {
   opacity: 50%;
 }
 .second-column {

@@ -57,7 +57,7 @@ function displayForecast(response) {
                 }@2x.png" width="100%"/>
                 <p>${Math.round(
                   forecastDay.temp.max
-                )}°<span class="second-degree"> ${Math.round(
+                )}°<span class="min-degree"> ${Math.round(
           forecastDay.temp.min
         )}°</span></p>
             </div>`;
