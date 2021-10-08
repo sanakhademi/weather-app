@@ -148,3 +148,14 @@ hr {
     width: 120px;
   }
 }
+@media screen and (max-width: 375px) {
+  .second-column {
+    width: 185px;
+  }
+  .image-icon {
+    width: 100px;
+  }
+  .image-icon img {
+    width: 100px;
+  }
+}
